@@ -19,12 +19,13 @@ def ackermann(m, n):
     resuelve A(m, n - 1) y ese resultado se usa como segundo argumento de
     A(m - 1, ...).
     """
-    if m == 0:  # caso base
+    if m == 0:  # caso base: unico punto donde la recursion se detiene
         return n + 1
-    if n == 0:  # caso inductivo
+    if n == 0:  # caso inductivo: se baja m en uno y se reinicia n en uno
         return ackermann(m - 1, 1)
-    # caso inductivo
-    return ackermann(m - 1, ackermann(m, n - 1))
+    # caso inductivo: la llamada interna se resuelve antes de la externa
+    interno = ackermann(m, n - 1)
+    return ackermann(m - 1, interno)
 
 
 def main():
@@ -33,7 +34,7 @@ def main():
     m = int(input("ingrese m, entero no negativo: "))
     n = int(input("ingrese n, entero no negativo: "))
     resultado = ackermann(m, n)
-    print("el resultado es", resultado)
+    print(f"resultado = {resultado}")
 
 
 if __name__ == "__main__":
