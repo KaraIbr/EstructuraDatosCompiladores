@@ -15,12 +15,13 @@ def mcd(m, n):
     caso base: si n vale cero, el dividendo ya es multiplo del otro numero
     y se devuelve directamente.
     caso inductivo: si n es mayor que cero, el mismo problema se resuelve
-    con el residuo de dividir m entre n.
+    con el residuo de dividir m entre n, pasando n como nuevo primer
+    operando para que el segundo operando siempre baje.
     """
     if n == 0:  # caso base
         return m
     # caso inductivo
-    return mcd(m % n, n)
+    return mcd(n, m % n)
 
 
 def main():
@@ -29,7 +30,7 @@ def main():
     m = int(input("ingrese el primer entero positivo: "))
     n = int(input("ingrese el segundo entero positivo: "))
     resultado = mcd(m, n)
-    print("el mcd es", resultado)
+    print(f"mcd = {resultado}")
 
 
 if __name__ == "__main__":
