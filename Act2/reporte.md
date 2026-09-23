@@ -55,7 +55,7 @@ seleccion directa: 1225 comparaciones, 45 intercambios, 49 pasadas, 0.10 ms.
 ## conclusiones
 
 los cinco metodos son o(n2) en el peor caso y todos usan o(1) de memoria
-auxiliar, asi que solo son razonables con arreglos pequeños. el metodo mas
+auxiliar, asi que solo son razonables con arreglos pequenos. el metodo mas
 rapido en el caso aleatorio fue la insercion directa, porque compara poco
 aunque mueve mucho. la seleccion directa es la que menos intercambios hace,
 conviene cuando intercambiar es caro, pero no es estable. ni la senal ni la
