@@ -40,7 +40,7 @@ def main():
     m = int(input("ingrese m, entero positivo: "))
     n = int(input("ingrese n, entero positivo: "))
     total = particiones(m, n)
-    print("el total de particiones es", total)
+    print(f"total de particiones = {total}")
 
 
 if __name__ == "__main__":

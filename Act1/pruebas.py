@@ -9,7 +9,7 @@ ejecutar desde la carpeta act1 con:
 
 import unittest
 
-from seccion2 import ej2_1_mcd, ej2_2_ackermann
+from seccion2 import ej2_1_mcd, ej2_2_ackermann, ej2_3_particiones
 
 
 class TestMcd(unittest.TestCase):
@@ -32,6 +32,17 @@ class TestAckermann(unittest.TestCase):
 
     def test_caso_base_con_m_cero(self):
         self.assertEqual(ej2_2_ackermann.ackermann(0, 5), 6)
+
+
+class TestParticiones(unittest.TestCase):
+    def test_caso_de_prueba_1(self):
+        self.assertEqual(ej2_3_particiones.particiones(5, 5), 7)
+
+    def test_caso_de_prueba_2(self):
+        self.assertEqual(ej2_3_particiones.particiones(6, 6), 11)
+
+    def test_caso_base_con_m_igual_a_uno(self):
+        self.assertEqual(ej2_3_particiones.particiones(1, 7), 1)
 
 
 if __name__ == "__main__":
