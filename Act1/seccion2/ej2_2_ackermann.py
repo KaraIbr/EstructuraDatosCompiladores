@@ -22,7 +22,7 @@ def ackermann(m, n):
     if m == 0:  # caso base
         return n + 1
     if n == 0:  # caso inductivo
-        return ackermann(m, 1)
+        return ackermann(m - 1, 1)
     # caso inductivo
     return ackermann(m - 1, ackermann(m, n - 1))
 
