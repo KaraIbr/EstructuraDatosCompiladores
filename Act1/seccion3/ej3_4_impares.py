@@ -15,10 +15,10 @@ def imprimir_impares(n):
     """
     if n <= 0:  # caso base
         return
-    if n % 2 != 0:
-        print(n, end=" ")
     # caso inductivo
     imprimir_impares(n - 1)
+    if n % 2 != 0:
+        print(n, end=" ")
 
 
 def main():
