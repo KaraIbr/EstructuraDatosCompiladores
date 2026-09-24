@@ -45,8 +45,11 @@ def pasos(datos):
         aux = arr[i]
         k = i - 1
         yield list(arr), "pasada", i, None
-        while k >= 0 and aux < arr[k]:
+        while True:
+            cond = k >= 0 and aux < arr[k]
             yield list(arr), "comparar", k, i
+            if not cond:
+                break
             arr[k + 1] = arr[k]
             yield list(arr), "desplazar", k, k + 1
             k -= 1
